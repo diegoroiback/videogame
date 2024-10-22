@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.header {
+  display: flex;
+  padding: 3rem 2rem;
+
+  &__container {
+    @include container;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+}

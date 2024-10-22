@@ -1,0 +1,75 @@
+// Screens
+$screen-sm: 569px;
+$screen-md: 800px;
+$screen-lg: 1200px;
+
+// Colors
+$main-color: #131C1C;
+$second-color: #0C1212;
+$light: #fff;
+$card-gradient: linear-gradient(176deg, rgba($second-color, .1) 0%, rgba($second-color, .7) 100%);
+$main-gradient: linear-gradient(176deg, rgba($main-color, 1) 0%, rgba($main-color, .75) 25%, rgba($main-color, .5) 50%, rgba($main-color, .75) 75%, rgba($main-color, 1) 100%);
+$shadow: rgba(0, 0, 0, .5) 0 .4rem 2.3rem .5rem;
+
+// Font sizes
+$title-size: 6.4rem;
+$title-size-responsive: 3.8rem;
+$title-card-size: 3.6rem;
+$title-card-size-responsive: 3.6rem;
+$p-size: 1.6rem;
+
+// Mixins
+@mixin container {
+  margin: auto;
+  max-width: 120rem;
+  width: 100%;
+}
+
+@mixin title-size {
+  font-size: $title-size-responsive;
+  font-weight: 700;
+
+  @media (min-width: $screen-md) {
+    font-size: $title-size;
+  }
+}
+
+@mixin title-card-size {
+  font-size: $title-card-size-responsive;
+  font-weight: 700;
+
+  @media (min-width: $screen-md) {
+    font-size: $title-card-size;
+  }
+}
+
+@mixin link {
+  align-items: center;
+  color: $light;
+  display: flex;
+  font-size: $p-size;
+  gap: 1.5rem;
+  padding-bottom: .5rem;
+  position: relative;
+  transition: all .5s;
+
+  &::before {
+    background-color: $light;
+    bottom: 0;
+    content: '';
+    height: .2rem;
+    left: 0;
+    position: absolute;
+    transition: width .5s;
+    width: 0;
+  }
+
+  &:hover {
+    gap: 1rem;
+    padding-left: .6rem;
+
+    &::before {
+      width: 3rem;
+    }
+  }
+}

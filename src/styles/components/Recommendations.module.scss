@@ -1,0 +1,22 @@
+@import '../variables.scss';
+
+.recommendations {
+  background-color: $second-color;
+  min-height: 90vh;
+  padding-bottom: 6rem;
+  padding-top: 6rem;
+  width: 100%;
+
+  &__container {
+    width: 100%;
+  }
+
+  &__title {
+    @include title-size;
+    animation-duration: 1s;
+    animation-name: bounceInUp;
+    color: $light;
+    text-align: center;
+    padding: 0 2rem;
+  }
+}

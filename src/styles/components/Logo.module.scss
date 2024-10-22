@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.logo {
+  align-items: center;
+  color: $light;
+  display: flex;
+  gap: 1rem;
+
+  svg {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: $p-size;
+    font-weight: 300;
+    text-transform: uppercase;
+  }
+}
